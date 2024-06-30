@@ -1,3 +1,5 @@
+import "../styles/Search.scss";
+
 function Search() {
   return (
     <>

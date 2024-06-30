@@ -1,3 +1,5 @@
+![Logo](./public/the-heroes.svg)
+
 # The Heroes
 
 Welcome to **The Heroes**! This is an open-source project that showcases a website of superheroes, leveraging the Marvel API and built using the Vite framework. This project is created for the HackClub Arcade.

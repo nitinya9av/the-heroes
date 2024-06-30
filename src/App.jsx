@@ -1,10 +1,17 @@
+import theheroesLogo from '/the-heroes.svg'
 import './App.css'
 
 function App() {
   return (
     <>
       <div>
-      <h1>The Heroes</h1>
+        <img src={theheroesLogo} className="logo" alt="The Heroes logo" />
+      </div>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter character name"
+        />
       </div>
     </>
   )

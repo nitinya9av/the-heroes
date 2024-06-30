@@ -1,5 +1,6 @@
-import theheroesLogo from '/the-heroes.svg'
 import './App.css'
+import theheroesLogo from '/the-heroes.svg'
+import Search from './components/Search'
 
 function App() {
   return (
@@ -8,10 +9,7 @@ function App() {
         <img src={theheroesLogo} className="logo" alt="The Heroes logo" />
       </div>
       <div>
-        <input
-          type="text"
-          placeholder="Enter character name"
-        />
+        <Search />
       </div>
     </>
   )

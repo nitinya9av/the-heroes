@@ -1,4 +1,4 @@
-![Logo](./public/the-heroes.svg)
+<img src="./public/the-heroes.svg" width="300" height="300" alt="Logo">
 
 # The Heroes
 

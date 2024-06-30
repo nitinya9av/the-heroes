@@ -5,6 +5,7 @@ import "../styles/Search.scss";
 function Search() {
   const [characterName, setCharacterName] = useState("");
   const [characterData, setCharacterData] = useState(null);
+  const [comicData, setComicData] = useState(null);
 
   const privateKey = import.meta.env.VITE_MARVEL_PRIVATE_KEY;
   const publicKey = import.meta.env.VITE_MARVEL_PUBLIC_KEY;
@@ -32,6 +33,25 @@ function Search() {
       })
       .catch(() => {
         console.log("error while getting character data");
+      });
+  };
+
+  const getComicData = (characterId) => {
+    window.scrollTo({ top: 0, left: 0 });
+
+    const timeStamp = new Date().getTime();
+    const hash = generateHash(timeStamp);
+
+    const url = `https://developer.marvel.com:443/v1/public/characters/${characterId}/comics?apikey=${publicKey}&hash=${hash}&ts=${timeStamp}`;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((result) => {
+        setComicData(result.data);
+        console.log(result.data);
+      })
+      .catch(() => {
+        console.log("error while getting comic data");
       });
   };
 

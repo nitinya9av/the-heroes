@@ -1,6 +1,8 @@
 import { useState } from "react";
 import md5 from "md5";
 import "../styles/Search.scss";
+import Characters from "./Characters";
+import Comics from "./Comics";
 
 function Search() {
   const [characterName, setCharacterName] = useState("");
@@ -84,6 +86,14 @@ function Search() {
           </button>
         </div>
       </form>
+
+      {!comicData && characterData && characterData.results[0] && (
+        <Characters data={characterData.results} onClick={getComicData} />
+      )}
+
+      {comicData && comicData.results[0] && (
+        <Comics data={comicData.results} onClick={() => {}} />
+      )}
     </>
   );
 }

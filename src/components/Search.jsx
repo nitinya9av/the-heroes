@@ -24,6 +24,15 @@ function Search() {
 
     const url = `https://developer.marvel.com:443/v1/public/characters?apikey=${publicKey}&hash=${hash}&ts=${timeStamp}&nameStartsWith=${characterName}&limit=100`;
 
+    fetch(url)
+      .then((response) => response.json())
+      .then((result) => {
+        setCharacterData(result.data);
+        console.log(result.data);
+      })
+      .catch(() => {
+        console.log("error while getting character data");
+      });
   };
 
   const generateHash = (timeStamp) => {

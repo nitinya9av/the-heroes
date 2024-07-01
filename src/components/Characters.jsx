@@ -7,6 +7,10 @@ function Characters({ data, onClick }) {
           <div
             key={dataItem.id}
             className="characterCard"
+            style={{
+              background: `url(${dataItem.thumbnail.path}.${dataItem.thumbnail.extension}) no-repeat center`,
+              backgroundSize: "cover",
+            }}
             onClick={() => onClick(dataItem.id)}
           >
             <div className="caption">{dataItem.name}</div>

@@ -25,7 +25,7 @@ function Search() {
     const timeStamp = new Date().getTime();
     const hash = generateHash(timeStamp);
 
-    const url = `https://developer.marvel.com:443/v1/public/characters?apikey=${publicKey}&hash=${hash}&ts=${timeStamp}&nameStartsWith=${characterName}&limit=100`;
+    const url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${publicKey}&hash=${hash}&ts=${timeStamp}&nameStartsWith=${characterName}&limit=100`;
 
     fetch(url)
       .then((response) => response.json())
@@ -44,7 +44,7 @@ function Search() {
     const timeStamp = new Date().getTime();
     const hash = generateHash(timeStamp);
 
-    const url = `https://developer.marvel.com:443/v1/public/characters/${characterId}/comics?apikey=${publicKey}&hash=${hash}&ts=${timeStamp}`;
+    const url = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/comics?apikey=${publicKey}&hash=${hash}&ts=${timeStamp}`;
 
     fetch(url)
       .then((response) => response.json())

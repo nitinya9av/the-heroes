@@ -22,6 +22,47 @@
 
   transition: 0.2s linear;
   text-decoration-color: black;
+
+  .caption {
+    font-family: "Bangers", cursive;
+    font-size: 1.6em;
+    text-align: center;
+    margin: auto auto 0 auto;
+    padding: 0.5em 1em;
+
+    background-color: white;
+    background-image: url(../assets/paper.jpg);
+
+    color: black;
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+
+    &.bottom {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      color: black;
+      text-decoration: underline;
+      width: 60%;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+    box-shadow: 6px 6px black;
+    transform: translate(-2px, -2px);
+
+    .caption {
+      opacity: 0;
+    }
+
+    .bottom {
+      opacity: 1;
+    }
+  }
 }
 
 @media only screen and (max-width: 1200px) {

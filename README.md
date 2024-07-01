@@ -44,7 +44,8 @@ To get started with the project, follow these steps:
     - Obtain your API key from the Marvel Developer Portal.
     - Create a `.env` file in the root directory and add your API key:
         ```env
-        VITE_MARVEL_API_KEY=your_api_key_here
+        VITE_MARVEL_PUBLIC_KEY = "your_api_key_here"
+        VITE_MARVEL_PRIVATE_KEY = "your_api_key_here"
         ```
 
 4. **Run the development server**:

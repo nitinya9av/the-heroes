@@ -1,3 +1,4 @@
+import "../styles/Characters.scss";
 
 function Characters({ data, onClick }) {
   return (
